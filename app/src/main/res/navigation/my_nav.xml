@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pogodynka.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_basicFragment"
+            app:destination="@id/basicFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_forolderFragment"
+            app:destination="@id/forolderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicFragment"
+        android:name="com.example.pogodynka.BasicFragment"
+        android:label="fragment_basic"
+        tools:layout="@layout/fragment_basic" >
+        <action
+            android:id="@+id/action_basicFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_basicFragment_to_forolderFragment"
+            app:destination="@id/forolderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forolderFragment"
+        android:name="com.example.pogodynka.forolderFragment"
+        android:label="fragment_forolder"
+        tools:layout="@layout/fragment_forolder" >
+        <action
+            android:id="@+id/action_forolderFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_forolderFragment_to_basicFragment"
+            app:destination="@id/basicFragment" />
+    </fragment>
+</navigation>
